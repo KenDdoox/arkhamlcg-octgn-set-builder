@@ -10,11 +10,7 @@ from cardgamedb_scraper import scrape_set_from_url
 
 # from cardgamedb url
 def main():
-    if len(sys.argv) < 2:
-        print("args: cardgamedb_url")
-        return
-
-    url = sys.argv[1]
+    url = "http://www.cardgamedb.com/index.php/arkhamhorror/arkham-horror-the-card-game/_/the-circle-undone/before-the-black-throne/"
     arkhamset = scrape_set_from_url(url)
     json_path = create_set_file(arkhamset)
     print("Wrote set data to {}".format(json_path))

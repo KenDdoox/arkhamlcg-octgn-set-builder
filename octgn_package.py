@@ -442,23 +442,7 @@ def create_octgn_data(arkhamset):
     xml_tree.write(set_path, encoding='UTF-8', xml_declaration=True)
     print("created set XML file {}.".format(set_path))
 
-    # create xml file for each scenario with cards needed for play
-    #gamedb_decks_path = "GameDatabase/{}/Decks/".format(game_id)
-    decks_path = "Decks/Arkham Horror - The Card Game/"
-    for scenario in arkhamset.get('scenarios', []):
-        campaign_path = "{}/{} - {}".format(
-                decks_path, scenario['campaign_code'], scenario['campaign'])
-        try:
-            os.makedirs(campaign_path)
-        except FileExistsError:
-            pass
-        scenario_string = "{} - {}".format(scenario['number'], scenario['name'])
-        scenario_file_path = "{}/{}.o8d".format(campaign_path, scenario_string)
 
-        scenario_root = create_scenario_xml(scenario, arkhamset['id'])
-        scenario_xml_tree = ET.ElementTree(scenario_root)
-        scenario_xml_tree.write(scenario_file_path, encoding='UTF-8', xml_declaration=True)
-        print("created scenario file {}.".format(scenario_file_path))
 
-    return (set_path, scenario_file_path)
+    return(set_path)
 

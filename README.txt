@@ -1,3 +1,16 @@
+# Ken's note:
+# 1. Start by opening create_arkham_sheet_from_cardgamedb.py in notepad++
+# 2. Replace the URL for the set at cardgamedb in line 13
+# 3. Then open it in Idle, then run it
+# 4. Open the link to the generated Google Sheet, edit the card data, add card back data, check cardgamedb to see if additional images are needed
+# 5. Open create_octgn_package.py in Idle, then run it
+# 6. Delete redundant generated files, move zip file to another place and double check
+# 7. Test run on OCTGN Deck Editor
+# 8. Make scenario setup deck
+# 9. Test run scenario
+# 10. Push to Github
+
+
 
 # TODO: detect scenarios by looking at encounter sets which contain acts/agendas
 # TODO: split off scenario sheet population as a separate script so we can run it
